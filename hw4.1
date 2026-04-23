@@ -1,0 +1,23 @@
+import math
+# 1
+a,b,c= 1,2,-5
+delta = math.sqrt(b ** 2 - 4 * a * c)
+results = [(-b + delta) / (2*a), (-b - delta) / (2*a)]
+print(f"Ans: {results}")
+
+#2
+
+x=int(input('what is x'))
+y=int(input('what is y'))
+Area= x*y
+print("The area of the circle is:",Area)
+
+#3
+F=input('how many friends do you have?')
+F=int(F)
+S=input('how many chocolates they must give to their friends.')
+S=int(S)
+Ans1= 'you need to give your friends'
+print(F//S)
+Ans2='you are left-over for themselves after sharing'
+print(F%S)
