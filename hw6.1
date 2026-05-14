@@ -1,0 +1,70 @@
+#1
+def Quadratic ():
+    print("(ax² + bx + c = 0) ")
+
+    a = int(input(" a: "))
+    b = int(input(" b: "))
+    c = int(input(" c: "))
+
+    if a == 0:
+        print("Error: 'a' not be zero.")
+        return
+
+    x = b ** 2 - 4 * a * c
+
+    if x > 0:
+        r1 = (-b + x) / (2 * a)
+        r2 = (-b - x) / (2 * a)
+        print(f"There are 2 real roots: {r1} and {r2}")
+
+    elif x == 0:
+        r = -b / (2 * a)
+        print(f"There is 1 real root (double root): {r}")
+
+    else:
+        print("There are no real roots.")
+
+
+Quadratic ()
+
+#2
+while True:
+    n = input("Enter a 4-digit even number (cannot end in 0): ")
+
+    if len(n) != 4 or not n.isdigit():
+        print("BAD: {n} is not 4 digits.")
+    elif int(n) % 2 != 0:
+        print("BAD: {n} is not even.")
+    elif n.endswith('0'):
+        print("BAD: {n} ends with 0.")
+    else:
+        print("GOOD: {n} meets all conditions!")
+        break
+
+#3
+def F(x):
+    if x == 1:
+        return 1
+    else:
+        return F(x - 1)
+print(F(2))
+
+#4
+
+scoreAES = int(input("Enter {s} score: "))
+
+if scoreAES < 0 or scoreAES > 100:
+    print(" Score must be between 0 and 100.")
+
+
+if min(scoreAES) < 40:
+    print("Result: Do not pass (a subject is below 40).")
+
+else:
+    a = sum(scoreAES) / 4
+    print("Average: {a}")
+
+    if a < 60:
+        print(" Do not progress (GPA < 60).")
+    else:
+        print(" You passed!")
