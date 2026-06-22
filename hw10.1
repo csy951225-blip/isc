@@ -1,0 +1,49 @@
+Q1
+numbers = []
+while True:
+    try:
+        x = float(input("Please,Enter a number: "))
+        numbers.append(x)
+    except ValueError:
+        break
+
+if len(numbers) > 0:
+    average = sum(numbers) / len(numbers)
+    print("Mean average =", average)
+else:
+    print("No valid numbers entered.")
+    
+Q2
+A = set()
+B = set()
+
+print("Please input A :")
+
+while True:
+    x = input()
+    if item.lower() == "end":
+        break
+    A.add(x)
+
+print("Please input  B :")
+
+while True:
+    x = input()
+    if item.lower() == "end":
+        break
+    B.add(x)
+
+print("Intersection of A and B is", A.intersection(B))
+
+Q3
+
+import math
+
+def rootfactorial(x):
+    if type(x)= int:
+        raise TypeError
+
+    if x < 0 or x >= 20:
+        raise ValueError
+
+    return math.sqrt(math.factorial(x))
